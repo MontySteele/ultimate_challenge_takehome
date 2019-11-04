@@ -55,4 +55,16 @@ My work is available in the file 'Ultimate_challenge_takehome_p3.ipynb'.
 
 ### Part 3 results
 
-I found that 37.6% of the users in the dataset were retained
+I found that 37.6% of the users in the dataset were retained.
+
+I trained a Random Forest model on the dataset and then examined its feature importances to find which features of the dataset were most predictive of user retention.I used a random forest classifier as it is known for high accuracy but is also easily interpretable - we can quickly get feature importances to understand what our model is doing.
+
+There are several other approaches that could be taken here. Logistic Regression models also offer accuracy and interpretability, but usually do not do quite as well. We could try a neural network approach which might give higher accuracy at the cost of interpretability - this is fine if we aren't trying to necessarily understand our results, but in this case we do. Random forests offer reasonable accuracy and are easily understandable, which is good for this use case.
+
+I took out 20% of the data as a test data set. I trained my model using a grid search to find the best parameters and validating using a 5-fold cross-validation on the training set. The best model from this part was then applied to the test set and received a 78.7% accuracy. I have attached a plot of its feature importances below.
+
+![Feature importances, sorted.](graphs/Feature_importances_of_Random_Forest.png?raw=true "Feature importances")
+
+The most important features are avg_dist, avg_rating_by_driver and avg_rating_of_Driver. Upon followup data exploration, it seems that retained users took slightly shorter trips, and gave and received very slightly lower rating, than unretained drivers. This suggests that it is better to market the use of Ultimate for shorter rather than longer trips, but there is not a huge absolute change in these variables.
+
+More informatively, we see that the magnitude of a surge, taking a trip in the first 30 days, using Ultimate Black, and taking trips on weekends are all strong predictors of retention. These are more easily turned into actionable suggestions. I would suggest to the marketing team that they take actions to encourage new users to take trips soon after signing up, such as with signup discounts or free trips. Furthermore it could be useful to market specific weekend promotions or Ultimate Black promotions to boost use of that service.
