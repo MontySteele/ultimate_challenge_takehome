@@ -9,6 +9,7 @@ Logins were lowest on Monday, gradually rising to a peak on Saturday and then di
 
 ## Plots of my data. showing hourly, per-weekday, weekly and monthly data trends.
 
+|                 |                 |
 | -------------  | -------------   |
 | ![Hourly data.](graphs/hourlyData.png?raw=true "Hourly data")| ![Per-weekday data.](graphs/weekdayData.png?raw=true "Per-weekday data") |
 | ![Weekly data.](graphs/weeklyData.png?raw=true "Weekly data")| ![Monthly data.](graphs/MonthlyData.png?raw=true "Monthly data")   |
